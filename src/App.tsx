@@ -1,3 +1,5 @@
+import styles from './style';
+
 const App = () => {
 
     return (
