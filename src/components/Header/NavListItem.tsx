@@ -3,7 +3,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { navActiveState } from '../../recoil/navStore';
 import { isDrawerOpenState } from '../../recoil/drawerStore';
 
-interface Props{
+type Props = {
     link: NavLink;
 }
 

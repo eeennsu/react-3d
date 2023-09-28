@@ -1,5 +1,7 @@
-type TransitionType = 'spring' | 'tween';
-type Direction = 'left' | 'right' | 'up' | 'down'
+import { Variants } from 'framer-motion';
+
+type TransitionType = 'spring' | 'tween' | '';
+type Direction = 'left' | 'right' | 'up' | 'down' | '';
 
 type Point = {
     x: number | string;
@@ -23,12 +25,7 @@ type Show = Partial<Point> & {
     transition: Transition
 }
 
-type Animation = {
-    hidden: Hidden;
-    show: Show
-}
-
-export const textVariant = (delay: number): Animation => {
+export const textVariant = (delay: number = 1): Variants => {
 
     return {
         hidden: {
@@ -39,15 +36,15 @@ export const textVariant = (delay: number): Animation => {
             y: 0,
             opacity: 1,
             transition: {
-                type: 'spring',
-                duration: 1.25,
+                type: 'tween',
+                duration: 1,
                 delay
             }
         }
     }; 
 }
 
-export const fadeIn = (direction: Direction, type: TransitionType, delay: number, duration: number): Animation => {
+export const fadeIn = (direction: Direction, type: TransitionType, delay: number, duration: number): Variants => {
 
     const x = direction === 'left' ? 100 : direction === 'right' ? -100 : 0;
     const y = direction === 'up' ? 100 : direction === 'down' ? -100 : 0;
@@ -72,7 +69,7 @@ export const fadeIn = (direction: Direction, type: TransitionType, delay: number
     };
 }
 
-export const zoomIn = (delay: number, duration: number): Animation => {
+export const zoomIn = (delay: number, duration: number): Variants => {
 
     return {
         hidden: {
@@ -92,7 +89,7 @@ export const zoomIn = (delay: number, duration: number): Animation => {
     };
 }
 
-export const slideIn = (direction: Direction, type: TransitionType, delay: number, duration: number): Animation => {
+export const slideIn = (direction: Direction, type: TransitionType, delay: number, duration: number): Variants => {
     
     const x = direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0;
     const y = direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0;
@@ -115,14 +112,15 @@ export const slideIn = (direction: Direction, type: TransitionType, delay: numbe
     }
 }
 
-export const staggerContainer = (staggerChildren: unknown, delayChildren: unknown): Animation => {
+// 다수의 요소가 순차적으로 나타날 때 상요
+export const staggerContainer = (staggerChildren?: any, delayChildren?: any): Variants => {
 
     return {
         hidden: {},
         show: {
             transition: {
                 staggerChildren,
-                delayChildren
+                delayChildren: delayChildren || 0
             }
         }
     }

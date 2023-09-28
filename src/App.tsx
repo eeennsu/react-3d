@@ -23,8 +23,8 @@ const App = () => {
                     <Works />
                     <Feedbacks />
 
-                     {/* 3d 별 몇개를 표시할 예정*/}
-                    <div className='relative z-0 '>
+                    {/* 3d 별 몇개를 표시할 예정*/}
+                    <div className='relative z-0'>
                         <Contact />
                         <StarsCanvas />
                     </div>

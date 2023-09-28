@@ -23,9 +23,13 @@ import {
     jobit,
     tripguide,
     threejs,
+    recoil,
+    reactQuery,
+    zustand,
+    nextjs,
 } from '../assets';
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
     {
         id: 'about',
         title: 'About',
@@ -40,26 +44,26 @@ export const navLinks = [
     },
 ];
 
-export const services = [
+export const services: Service[] = [
     {
-        title: 'Web Developer',
+        title: 'React',
         icon: web,
     },
     {
-        title: 'React Native Developer',
+        title: 'TypeScript',
         icon: mobile,
     },
     {
-        title: 'Backend Developer',
+        title: 'Tailwind CSS',
         icon: backend,
     },
     {
-        title: 'Content Creator',
+        title: 'Next.js',
         icon: creator,
     },
 ];
 
-export const technologies = [
+export const technologies: Technology[] = [
     {
         name: 'HTML 5',
         icon: html,
@@ -85,6 +89,18 @@ export const technologies = [
         icon: redux,
     },
     {
+        name: 'Recoil',
+        icon: recoil,
+    },
+    {
+        name: 'React(Tanstack) Query',
+        icon: reactQuery,
+    },
+    {
+        name: 'Zustand',
+        icon: zustand,
+    },
+    {
         name: 'Tailwind CSS',
         icon: tailwind,
     },
@@ -97,6 +113,10 @@ export const technologies = [
         icon: mongodb,
     },
     {
+        name: 'Next.js',
+        icon: nextjs,
+    },
+    {
         name: 'Three JS',
         icon: threejs,
     },
@@ -104,17 +124,11 @@ export const technologies = [
         name: 'git',
         icon: git,
     },
-    {
-        name: 'figma',
-        icon: figma,
-    },
-    {
-        name: 'docker',
-        icon: docker,
-    },
+
+  
 ];
 
-export const experiences = [
+export const experiences: Experience[] = [
     {
         title: 'React.js Developer',
         company_name: 'Starbucks',
@@ -169,7 +183,7 @@ export const experiences = [
     },
 ];
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
     {
         testimonial:
             'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
@@ -194,7 +208,7 @@ export const testimonials = [
     },
 ];
 
-export const projects = [
+export const projects: Project[] = [
     {
         name: 'Car Rent',
         description:

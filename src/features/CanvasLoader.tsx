@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { Html, useProgress } from '@react-three/drei';
 
-const Loader: FC = () => {
+const CanvasLoader: FC = () => {
 
     const { progress } = useProgress();
     
@@ -31,4 +31,4 @@ const Loader: FC = () => {
     );
 };
 
-export default Loader;
+export default CanvasLoader;

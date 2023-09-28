@@ -23,7 +23,7 @@ const Navbar: FC = () => {
     }
 
     return (
-        <header className={`${styles.paddingX} fixed top-0 z-20 flex items-center w-full py-5`}>
+        <header className={`${styles.paddingX} fixed top-0 z-20 flex items-center w-full py-5 bg-gray-500/80`}>
             <nav className='flex items-center justify-between w-full mx-auto max-w-7xl'>
                 <Link 
                     className='flex items-center gap-3' 

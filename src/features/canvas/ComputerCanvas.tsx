@@ -2,13 +2,14 @@ import type { FC } from 'react';
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import  { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import CanvasLoader from '../Loader';
+import CanvasLoader from '../CanvasLoader';
 
 type Props = {
     intensity: number;
     isMobile?: boolean;
 }
 
+// 3d computer
 const Computers: FC<Props> = ({ intensity, isMobile }) => {
 
     const computer = useGLTF('./desktop_pc/scene.gltf');
