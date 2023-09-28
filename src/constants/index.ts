@@ -40,7 +40,7 @@ export const navLinks = [
     },
 ];
 
-const services = [
+export const services = [
     {
         title: 'Web Developer',
         icon: web,
@@ -59,7 +59,7 @@ const services = [
     },
 ];
 
-const technologies = [
+export const technologies = [
     {
         name: 'HTML 5',
         icon: html,
@@ -77,7 +77,7 @@ const technologies = [
         icon: typescript,
     },
     {
-        name: 'React JS',
+        name: 'React',
         icon: reactjs,
     },
     {
@@ -114,7 +114,7 @@ const technologies = [
     },
 ];
 
-const experiences = [
+export const experiences = [
     {
         title: 'React.js Developer',
         company_name: 'Starbucks',
@@ -169,7 +169,7 @@ const experiences = [
     },
 ];
 
-const testimonials = [
+export const testimonials = [
     {
         testimonial:
             'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
@@ -194,7 +194,7 @@ const testimonials = [
     },
 ];
 
-const projects = [
+export const projects = [
     {
         name: 'Car Rent',
         description:

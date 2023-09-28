@@ -6,7 +6,7 @@ const Tech: FC = () => {
 
     return (
         <div>
-
+            Tech
         </div>
     );
 };

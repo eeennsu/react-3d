@@ -1,14 +1,14 @@
 import type { FC } from 'react';
 
-const Navbar: FC = () => {
+const Earth: FC = () => {
 
 
 
     return (
         <div>
-
+            Earth
         </div>
     );
 };
 
-export default Navbar;
+export default Earth;

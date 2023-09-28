@@ -6,7 +6,7 @@ const Experience: FC = () => {
 
     return (
         <div>
-
+            Experience
         </div>
     );
 };

@@ -6,7 +6,7 @@ const Feedbacks: FC = () => {
 
     return (
         <div>
-
+            Feedbacks
         </div>
     );
 };

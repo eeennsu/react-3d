@@ -1,14 +1,14 @@
 import type { FC } from 'react';
 
-const Contact: FC = () => {
+const Stars: FC = () => {
 
 
 
     return (
         <div>
-            Contact
+            Stars
         </div>
     );
 };
 
-export default Contact;
+export default Stars;
