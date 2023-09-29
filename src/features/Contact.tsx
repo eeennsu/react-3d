@@ -6,7 +6,6 @@ import styles from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn, textVariant } from '../utils/motion';
-import env from '../env';
 
 type UserForm = {
     name: string;
@@ -26,47 +25,58 @@ const initialUserForm: UserForm = {
 
 const Contact: FC = () => {
 
-    const refForm = useRef(null);
+    const refForm = useRef<any>();
     const [form, setForm] = useState<UserForm>(initialUserForm);
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setForm(prev => ({
-            ...prev,
-            [e.target.name]: e.target.value
-        }))
+        // setForm(prev => ({
+        //     ...prev,
+        //     [e.target.name]: e.target.value
+        // }))
+
+        setForm(prev => {
+            const { name, value } = e.target;
+
+            return {
+                ...prev,
+                [name]: value
+            }
+        });
     }
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
         
-        try {
-            await emailjs.send(
-                env.VITE_EMAILJS_SERVICE_ID,
-                env.VITE_EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: form.name,
-                    to_name: 'eeennsu',
-                    from_email: form.email,
-                    to_email: 'xxx592@naver.com',
-                    message: form.message
-                },
-                env.VITE_EMAILJS_PUBLIC_KEY
-            );
-            
-        } catch (error) {
-            if (error instanceof Error) {
-                console.log(error.message);
+        const body = {
+            from_name: form.name,
+            to_name: 'eeennsu',
+            from_email: form.email,
+            to_email: 'xxx592@naver.com',
+            message: form.message
+        };
+
+        emailjs.send(
+            import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+            body,
+            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        ).then(res => {
+            setIsLoading(false);
+
+            alert('Thanks! I call back to you ASAP');
+    
+            setForm(initialUserForm);
+        })
+        .catch(err => {
+            if (err instanceof Error) {
+                console.log(err.message);
                 alert('something wrong');
+                setIsLoading(false);
                 throw new Error();
-            }         
-        }
-        setIsLoading(false);
-
-        alert('Thanks! I call back to you ASAP');
-
-        setForm(initialUserForm);
+            }    
+        })
     }
 
     return (
@@ -87,7 +97,7 @@ const Contact: FC = () => {
                         <span className='font-medium text-white'>
                             your name
                         </span>
-                        <input type="text" name='name' value={form.name} onChange={handleChange} placeholder="what's your name?"
+                        <input required type="text" name='name' value={form.name} onChange={handleChange} placeholder="what's your name?"
                         className='px-6 py-4 font-medium text-white transition-colors border-none rounded-lg outline-none focus:bg-violet-900/40 bg-tertiary placeholder:text-secondary' />
                     </label>
 
@@ -95,7 +105,7 @@ const Contact: FC = () => {
                         <span className='font-medium text-white'>
                             your email
                         </span>
-                        <input type="text" name='email' value={form.email} onChange={handleChange} placeholder="what's your email?"
+                        <input required type="email" name='email' value={form.email} onChange={handleChange} placeholder="what's your email?"
                         className='px-6 py-4 font-medium text-white transition-colors border-none rounded-lg outline-none focus:bg-violet-900/40 bg-tertiary placeholder:text-secondary' />
                     </label>
 
@@ -103,7 +113,7 @@ const Contact: FC = () => {
                         <span className='font-medium text-white'>
                             your message
                         </span>
-                        <textarea rows={7}  name='message' value={form.message} onChange={handleChange} placeholder="what's your message?"
+                        <textarea required rows={7}  name='message' value={form.message} onChange={handleChange} placeholder="what's your message?"
                         className='px-6 py-4 font-medium text-white transition-colors border-none rounded-lg outline-none focus:bg-violet-900/40 bg-tertiary placeholder:text-secondary' />
                     </label>
                     <button type='submit' className='px-8 py-3 font-bold transition-colors rounded-md shadow-md hover:bg-violet-900 active:bg-violet-950 w-fit shadow-primary bg-tertiary' disabled={isLoading}> 
