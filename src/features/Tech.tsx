@@ -6,7 +6,7 @@ import TechBallListItem from '../components/Tech/TechBallListItem';
 const Tech: FC = () => {
 
     return (
-        <div className='flex flex-row flex-wrap justify-center gap-x-24 gap-y-5'>
+        <div className='flex flex-row flex-wrap justify-center gap-x-20 gap-y-5'>
             {
                 technologies.map((tech) => (
                     <TechBallListItem 

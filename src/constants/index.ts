@@ -63,6 +63,8 @@ export const services: Service[] = [
     },
 ];
 
+// 크롬의 캔버스 개수 제한으로 (16개) 조정 필요함
+// https://github.com/adrianhajdin/project_3D_developer_portfolio/issues/7
 export const technologies: Technology[] = [
     {
         name: 'HTML 5',
@@ -108,24 +110,22 @@ export const technologies: Technology[] = [
         name: 'Node JS',
         icon: nodejs,
     },
-    {
-        name: 'MongoDB',
-        icon: mongodb,
-    },
+    // {
+    //     name: 'MongoDB',
+    //     icon: mongodb,
+    // },
     {
         name: 'Next.js',
         icon: nextjs,
     },
-    {
-        name: 'Three JS',
-        icon: threejs,
-    },
-    {
-        name: 'git',
-        icon: git,
-    },
-
-  
+    // {
+    //     name: 'Three JS',
+    //     icon: threejs,
+    // },
+    // {
+    //     name: 'git',
+    //     icon: git,
+    // }, 
 ];
 
 export const experiences: Experience[] = [

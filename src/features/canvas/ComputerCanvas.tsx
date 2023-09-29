@@ -22,7 +22,7 @@ const Computers: FC<Props> = ({ intensity, isMobile }) => {
                 position={[-20, 50, 10]} 
                 angle={0.12}
                 penumbra={1}
-                cashShadow
+                castShadow
                 shadow-mapSize={1024}
             />
             <primitive 
@@ -45,7 +45,6 @@ const ComputerCanvas: FC<Props> = ({ intensity }) => {
         setIsMobile(mediaQuery.matches);
 
         const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-            console.log('체인지!');
             setIsMobile(e.matches);
         }
 
