@@ -37,6 +37,4 @@ const Works: FC = () => {
     );
 };
 
-const SectionedWorks = SectionWrapper(Works, 'work');
-
-export default SectionedWorks;
+export default SectionWrapper(Works, 'work');

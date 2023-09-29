@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Loader, Header, Tech, Works } from './features';
+import { About, Contact, Experience, Testimonials, Hero, Loader, Header, Tech, Works } from './features';
 import { StarsCanvas } from './features/canvas';
 import { useRecoilValue } from 'recoil';
 import { isDrawerOpenState } from './recoil/drawerStore';
@@ -21,7 +21,7 @@ const App = () => {
                     <Experience />
                     <Tech />
                     <Works />
-                    <Feedbacks />
+                    <Testimonials />
 
                     {/* 3d 별 몇개를 표시할 예정*/}
                     <div className='relative z-0'>

@@ -3,28 +3,6 @@ import { Variants } from 'framer-motion';
 type TransitionType = 'spring' | 'tween' | '';
 type Direction = 'left' | 'right' | 'up' | 'down' | '';
 
-type Point = {
-    x: number | string;
-    y: number | string;
-    opacity: number;
-    scale: number;
-}
-
-type Hidden = Partial<Point>;
-
-type Transition = {
-    type?: TransitionType;
-    duration?: number;
-    delay?: number;
-    ease?: 'easeOut';
-    staggerChildren?: unknown;
-    delayChildren?: unknown;
-}
-
-type Show = Partial<Point> & {
-    transition: Transition
-}
-
 export const textVariant = (delay: number = 1): Variants => {
 
     return {
@@ -113,7 +91,7 @@ export const slideIn = (direction: Direction, type: TransitionType, delay: numbe
 }
 
 // 다수의 요소가 순차적으로 나타날 때 상요
-export const staggerContainer = (staggerChildren?: any, delayChildren?: any): Variants => {
+export const staggerContainer = (staggerChildren?: number, delayChildren?: number): Variants => {
 
     return {
         hidden: {},
