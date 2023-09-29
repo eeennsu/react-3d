@@ -31,7 +31,7 @@ type Testimonial = {
     image: string;
 }
 
-type Color = {
+type Tag = {
     name: string;
     color: string;
 }
@@ -39,7 +39,7 @@ type Color = {
 type Project = {
     name: string;
     description: string;
-    tags: Color[];
+    tags: Tag[];
     image: string;
     source_code_link: string;
 }

@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
-import { services } from '../constants';
 
 import styles from '../styles';
 import { staggerContainer } from '../utils/motion';

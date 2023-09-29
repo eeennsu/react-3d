@@ -22,7 +22,7 @@ const Works: FC = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat modi cupiditate quod! Incidunt dolor atque recusandae, voluptate vero amet minima vel, minus perspiciatis eaque corporis omnis dignissimos dolorum neque modi consequatur voluptas, saepe unde? Illo doloribus, illum dignissimos vel velit, fuga quidem ipsa mollitia recusandae eligendi sit beatae rerum cupiditate, veritatis qui ipsum. Quod odio voluptas cum dolor assumenda quaerat.
             </motion.p>
 
-            <div className='flex flex-wrap mt-20 gap-7'>
+            <div className='flex flex-wrap gap-5 mt-20'>
                 {
                     projects.map((project, i) => (
                         <ProjectCard 
@@ -37,4 +37,6 @@ const Works: FC = () => {
     );
 };
 
-export default SectionWrapper(Works, 'work');
+const SectionedWorks = SectionWrapper(Works, 'work');
+
+export default SectionedWorks;

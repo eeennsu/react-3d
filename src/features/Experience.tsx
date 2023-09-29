@@ -34,4 +34,6 @@ const Experience: FC = () => {
     );
 };
 
-export default SectionWrapper(Experience, 'work');
+const SectionedExperience = SectionWrapper(Experience, 'work');
+
+export default SectionedExperience;
