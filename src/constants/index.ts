@@ -15,6 +15,7 @@ import {
     git,
     // figma,
     // docker,
+    rmta,
     meta,
     starbucks,
     tesla,
@@ -210,25 +211,37 @@ export const testimonials: Testimonial[] = [
 
 export const projects: Project[] = [
     {
-        name: 'Car Rent',
+        name: 'Movie Search App',
         description:
-            'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+            'This is an information website built with React that provides the latest information and search functionality for movies, TV shows, and actors. We sourced our data from the online database known as TMDB.',
         tags: [
             {
                 name: 'react',
                 color: 'blue-text-gradient',
             },
             {
-                name: 'mongodb',
+                name: 'typescript',
+                color: 'blue-text-gradient',
+            },          
+            {
+                name: 'zustand',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'react-query',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'tailwind css',
                 color: 'green-text-gradient',
             },
             {
-                name: 'tailwind',
-                color: 'pink-text-gradient',
+                name: 'Ant Design',
+                color: 'green-text-gradient',
             },
         ],
-        image: carrent,
-        source_code_link: 'https://github.com/',
+        image: rmta,
+        source_code_link: 'https://eeennsu.github.io/react-movie-tv-actor/',
     },
     {
         name: 'Job IT',
@@ -273,3 +286,5 @@ export const projects: Project[] = [
         source_code_link: 'https://github.com/',
     },
 ];
+
+export const myBlogLink: string = 'https://velog.io/@diso592';

@@ -7,6 +7,7 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
 import ExperienceCard from '../components/Experience/ExperienceCard';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
 
 const Experience: FC = () => {
 
@@ -21,14 +22,16 @@ const Experience: FC = () => {
                 </h2>              
             </motion.div>
             <div className='flex flex-col mt-20'>
-                {
-                    experiences.map((experience, i) => (
-                        <ExperienceCard 
-                            key={i}
-                            experience={experience}
-                        />
-                    ))
-                }
+                <VerticalTimeline>
+                    {
+                        experiences.map((experience, i) => (
+                            <ExperienceCard 
+                                key={i}
+                                experience={experience}
+                            />
+                        ))
+                    }
+                </VerticalTimeline>
             </div>
         </>
     );

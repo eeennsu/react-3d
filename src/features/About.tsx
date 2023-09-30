@@ -1,12 +1,16 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { services } from '../constants';
+import { myBlogLink, services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import ServiceCard from '../components/About/ServiceCard';
 import { SectionWrapper } from '../hoc';
 
 const About: FC = () => {
+
+    const handleBlgoLink = () => {
+        window.open(myBlogLink, '_blank');
+    }
 
     return (
         <>
@@ -19,7 +23,7 @@ const About: FC = () => {
                 </h2>
             </motion.div>
             <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aliquid commodi possimus ab optio recusandae, error asperiores. Quaerat, sequi nulla voluptas quibusdam eaque nisi consequatur vero maxime, dicta iste quisquam officia non velit, magni autem impedit unde. Consequatur autem culpa maiores delectus vitae iure quos ea quia deserunt suscipit optio earum quisquam facere eos, tenetur accusamus dolorem amet dolorum, facilis cumque? Qui minima aperiam vitae non et totam aut! Dicta ipsum earum, sunt, aspernatur, voluptates facilis sapiente alias rem ipsa officiis laborum adipisci consectetur necessitatibus similique mollitia delectus! Vero qui fugit, dicta voluptas ex assumenda rem earum provident suscipit dignissimos?
+                I am majoring in game development at university. Initially, I was fascinated by the creative aspects of game development. However, after taking web development courses, I developed an interest in web-related fields. I learned that web development brings great satisfaction through communicating with users and delivering value. Moreover, I am particularly passionate about pursuing challenges and growth in the frontend development field, aspiring to become a frontend developer in the future. Additionally, I aim to share my experiences and motivations with others through my blog. My blog address is <span onClick={handleBlgoLink} className='font-bold underline cursor-pointer '>https://velog.io/@diso592</span>! Let's communicate a lot!
             </motion.p>
 
             <div className='flex flex-wrap gap-10 mt-20'>

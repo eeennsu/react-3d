@@ -30,7 +30,7 @@ const ProjectCard: FC<Props> = ({ index, project: { description, image, name, ta
                     reset:          true,    // If the tilt effect has to be reset on exit.
                     easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
                 }}
-                className='w-full sm:w-[360px] p-4 sm:p-6 bg-tertiary rounded-2xl'
+                className='w-full sm:w-[360px] p-4 bg-tertiary rounded-2xl'
             >
                 <div className='relative w-full sm:h-[230px]'>
                     <img src={image} alt={name} className='object-cover w-full h-full rounded-2xl' />
@@ -39,20 +39,22 @@ const ProjectCard: FC<Props> = ({ index, project: { description, image, name, ta
                             <img src={github} alt='github' className='object-contain w-full h-full p-0.5' />
                         </div>
                     </div>
+                </div>   
+                <div className='sm:h-[300px] flex flex-col'>
+                    <h3 className='mt-6 text-3xl font-bold'>
+                        {name}
+                    </h3>
+                    <p className='mt-4 overflow-y-auto'>
+                        {description} 
+                    </p>
+                    <ul className='flex flex-wrap items-center mt-auto gap-y-2 gap-x-3'>
+                        {
+                            tags.map((tag) => (
+                                <TagListItem key={tag.name} tag={tag}/>
+                            ))
+                        }
+                    </ul> 
                 </div>                
-                <h3 className='mt-6 text-3xl font-bold'>
-                    {name}
-                </h3>
-                <p className='mt-4 text-ellipsis'>
-                    {description}
-                </p>
-                <ul className='flex mt-5 gap-x-4'>
-                    {
-                        tags.map((tag) => (
-                            <TagListItem key={tag.name} tag={tag}/>
-                        ))
-                    }
-                </ul>            
             </Tilt>
         </motion.div>
     );

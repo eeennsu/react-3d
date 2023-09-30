@@ -21,7 +21,7 @@ const Feedbacks: FC = () => {
                     Testimonials.
                 </h2>
             </motion.div>
-            <div className='flex flex-col p-5 gap-y-6 sm:gap-x-10 sm:flex-row sm:justify-between'>
+            <div className='flex flex-col items-center justify-center p-5 gap-y-6 sm:gap-x-10 sm:flex-row sm:justify-between'>
                 {
                     testimonials.map((testimonial, i) => (
                         <TestimonialCard key={testimonial.name} index={i} testimonial={testimonial} />

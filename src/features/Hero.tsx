@@ -25,11 +25,10 @@ const Hero: FC = () => {
                 
                 <div>
                     <h1 className={`${styles.heroHeadText}`}>
-                        Hi, I'm <span className='text-violet-500'>Eeennsu</span>
+                        Hi, I'm <span className='text-violet-500'>Eunsu</span>
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                        Lorem ipsum dolor sit amet, consectetur <br className='hidden sm:block'/> 
-                        adipisicing elit. Omnis, possimus.
+                        I am a college student who is captivated by the charm of web development with a passion for computer and web technologies.
                     </p>
                 </div>        
             </div>   

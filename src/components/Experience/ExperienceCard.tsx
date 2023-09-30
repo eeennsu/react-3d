@@ -16,7 +16,7 @@ const ExperienceCard: FC<Props> = ({ experience: { company_name, date, icon, ico
             contentArrowStyle={{
                 borderRight: '7px solid #232631'
             }}
-            dateClassName='w-full text-center mt-4 sm:mt-8 sm:text-right'
+   
             date={date}
             iconStyle={{
                 background: iconBg

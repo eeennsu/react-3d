@@ -26,6 +26,7 @@ import recoil from './tech/recoil.png';
 import reactQuery from './tech/react-query.png';
 import zustand from './tech/zustand.png';
 import nextjs from './tech/nextjs.png';
+import rmta from './react-movie-tv-actor.png';
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -36,6 +37,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import myLogo from './myLogo.png';
+
 
 export {
   recoil,
@@ -70,5 +72,6 @@ export {
   carrent,
   jobit,
   tripguide,
-  myLogo
+  myLogo,
+  rmta
 };
